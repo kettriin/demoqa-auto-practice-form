@@ -35,6 +35,10 @@ public class FillFormTest {
     @Test
     void positiveFormFilling() {
         open("/automation-practice-form");
+
+        executeJavaScript("$('footer').remove();");
+        executeJavaScript("$('#fixedban').remove();");
+
         $("#firstName").setValue("Marry");
         $("#lastName").setValue("By");
         $("#userEmail").setValue("mbemail@mail.ru");
